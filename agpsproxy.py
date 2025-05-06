@@ -42,7 +42,7 @@ def download_orbits():
             client.download_sync("top/1513^cep_pak_1week/cep_pak.bin", DIR_PREFIX + "BG770/cep_pak.bin")
             client.download_sync("top/1513^cep_pak_1week/cep_pak.bin", DIR_PREFIX + "BG772/cep_pak.bin")
             client.download_sync("top/1513^cep_pak_1week/cep_pak.bin", DIR_PREFIX + "BG773/cep_pak.bin")
-            [print(f"{path}: {humanize.naturalsize(os.path.getsize(path))}, {humanize.naturaldate(datetime.fromtimestamp(os.path.getmtime(path)))} {datetime.fromtimestamp(os.path.getmtime(path)).strftime('%H:%M:%S')}")
+            [print(f"{path}: {humanize.naturalsize(os.path.getsize(path))}, {humanize.naturaldate(datetime.fromtimestamp(os.path.getmtime(path)))} {datetime.fromtimestamp(os.path.getmtime(path)).strftime('%H:%M:%S')}", flush=True)
             for path in [DIR_PREFIX + f for f in ["BG950/cep_pak.bin", "BG951/lle_gps.lle", "BG951/lle_glo.lle", "BG951/lle_gal.lle"]]]
         except Exception as e:
             print(e)
@@ -58,4 +58,10 @@ async def log_requests(request: Request, call_next):
 if __name__ == "__main__":
     app.mount("/", StaticFiles(directory="agnss-data"), name="static")
     Thread(target=download_orbits, daemon=True).start()
-    asyncio.run(serve(app, web_config))
+    while True:
+        try:
+            asyncio.run(serve(app, web_config))
+        except Exception as e:
+            print(e)
+            time.sleep(1)
+            
