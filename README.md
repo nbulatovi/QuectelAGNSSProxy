@@ -64,6 +64,14 @@ pip install fastapi hypercorn webdavclient3 humanize
 }
 ```
 
+# Demo Server Hosted on AWS
+
+Quectel is hosting a demo server for its customers. You can access the server at the following IP address:
+
+```
+35.88.176.42
+```
+
 ## Example Modem AT commands
 
 Commands to enable XTRA feature and configure proxy server on BG950 module:
