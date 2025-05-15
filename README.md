@@ -71,6 +71,6 @@ Commands to enable XTRA feature and configure proxy server on BG950 module:
 ```
 AT+QGPSXTRA=1
 AT+CFUN=1,1
-AT+QGPSCFG="xtra_cfg","https://127.0.0.1/BG950/cep_pak.bin"
+AT+QGPSCFG="xtra_cfg","https://35.88.176.42/BG950/cep_pak.bin"
 AT+QGPSCFG="xtrafilesize",7
 ```
