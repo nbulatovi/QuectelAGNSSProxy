@@ -69,7 +69,7 @@ pip install fastapi hypercorn webdavclient3 humanize
 Quectel is hosting a demo server for its customers. You can access the server at the following IP address:
 
 ```
-35.88.176.42
+44.228.248.147
 ```
 
 ## Example Modem AT commands
