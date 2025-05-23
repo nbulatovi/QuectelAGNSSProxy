@@ -21,6 +21,7 @@ This document covers:
     - SSL certificates (`cert.pem` and `key.pem`) are used for secure communication.
 
 2. **WebDAV Client**:
+    - Description of WebDAV interface can be found in BG77xA-GL&BG95xA-GL GNSS Application Note.
     - The `webdav3` Python library is used to interact with the WebDAV server.
     - Credentials (username, domain, and password) are stored in the `config.json` file and used to authenticate the WebDAV client.
 
