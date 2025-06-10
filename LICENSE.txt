@@ -1,4 +1,1 @@
-/*============================================================================
-  Copyright (c) 2025 Quectel Wireless Solution, Co., Ltd.  All Rights Reserved.
-  Quectel Wireless Solution Proprietary and Confidential.
- =============================================================================*/
+Copyright (c) 2025 Quectel Wireless Solutions, Co., Ltd.
