@@ -83,3 +83,11 @@ AT+CFUN=1,1
 AT+QGPSCFG="xtra_cfg","https://44.228.248.147/BG950/cep_pak.bin"
 AT+QGPSCFG="xtrafilesize",7
 ```
+
+## Qecduino example
+
+Quecduino is an Arduino ESP32 library example showing how to command Quectel LPWA modules to:
+* Configure connection to Quectel AGNSS demo proxy server
+* Download XTRA AGNSS aiding file
+
+It is located at: https://github.com/nbulatovi/Quecduino
